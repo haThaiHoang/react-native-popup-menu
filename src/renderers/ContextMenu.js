@@ -82,7 +82,8 @@ export default class ContextMenu extends React.Component {
     Animated.timing(this.state.maxheightAnim, {
       duration: 200,
       toValue: 150,
-      easing: Easing.linear
+      easing: Easing.linear,
+      useNativeDriver: false
     }).start();
   }
 
@@ -91,7 +92,8 @@ export default class ContextMenu extends React.Component {
       Animated.timing(this.state.maxheightAnim, {
         duration: 200,
         toValue: 0,
-        easing: Easing.linear
+        easing: Easing.linear,
+        useNativeDriver: false
       }).start(resolve);
     });
   }
